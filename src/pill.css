@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  /* Retro editorial palette — pale mint paper, hard black, yellow + teal */
+  --paper: #eef5ec;
+  --panel: #f7faf4;
+  --cream-deep: #e4eee0;
+  --ink: #121611;
+  --ink-soft: #3b423a;
+  --ink-faint: #8a918688;
+  --mint: #a8ddd6;
+  --mint-deep: #79c6bd;
+  --sage: #79c6bd;
+  --yellow: #f4d64e;
+  --terracotta: #121611;
+  --terracotta-deep: #121611;
+  --terracotta-soft: #f4d64e;
+  --line: #121611;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background: transparent !important;
+  overflow: hidden;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  cursor: default;
+}
+
+/* heavy display type for headings / wordmark */
+.serif,
+.display { font-family: "Archivo", "Helvetica Neue", Arial, sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+
+.stage {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+}
+
+.stage[data-mode="full"],
+.stage[data-mode="sized"] {
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 8px;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  box-shadow: 5px 6px 0 rgba(18, 22, 17, 0.92);
+}
+
+.shell {
+  width: 100%;
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  box-shadow: 5px 6px 0 rgba(18, 22, 17, 0.92);
+  overflow: hidden;
+}
+
+.soft-scroll::-webkit-scrollbar { width: 7px; }
+.soft-scroll::-webkit-scrollbar-thumb { background: var(--ink); border-radius: 0; }
+.soft-scroll::-webkit-scrollbar-track { background: transparent; }
+
+button { font-family: inherit; cursor: pointer; }
+::selection { background: var(--yellow); }
